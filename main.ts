@@ -2,19 +2,18 @@ input.onButtonPressed(Button.A, function () {
     start = 1
 })
 input.onButtonPressed(Button.B, function () {
-    start = 0
     pasi = 0
     basic.showNumber(pasi)
 })
 input.onGesture(Gesture.Shake, function () {
     if (start == 1) {
-        if (input.acceleration(Dimension.Y) > 500) {
+        if (input.acceleration(Dimension.Strength) > 3000) {
             pasi += 2
         } else {
             pasi += 1
         }
         basic.showNumber(pasi)
-        if (pasi == 10) {
+        if (pasi == 100) {
             basic.showIcon(IconNames.Happy)
         }
     }
