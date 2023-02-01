@@ -13,7 +13,7 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
 input.onGesture(Gesture.Shake, function on_gesture_shake() {
     
     if (start == 1) {
-        pasi += 1
+        pasi = pasi + 1
         basic.showNumber(pasi)
         if (pasi == 100) {
             basic.showIcon(IconNames.Happy)

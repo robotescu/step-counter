@@ -16,7 +16,7 @@ input.on_button_pressed(Button.B, on_button_pressed_b)
 def on_gesture_shake():
     global pasi
     if start == 1:
-        pasi += 1
+        pasi = pasi + 1
         basic.show_number(pasi)
         if pasi == 100:
             basic.show_icon(IconNames.HAPPY)
